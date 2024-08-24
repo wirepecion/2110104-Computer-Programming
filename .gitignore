@@ -7,5 +7,7 @@
 # Ignore .exe files
 *.exe
 
+*[!.]*
+
 a.out
 *.txt
