@@ -4,5 +4,8 @@
 # Ignore all files with the extension .File
 *.File
 
+# Ignore .exe files
+*.exe
+
 a.out
 *.txt
