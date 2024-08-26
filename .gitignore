@@ -10,3 +10,13 @@
 
 a.out
 *.txt
+
+# Ignore object files
+*.o
+# Ignore binary executables
+*.out
+*.elf
+*.exe
+# Ignore other common build artifacts
+*.so
+*.a
