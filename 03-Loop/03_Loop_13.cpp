@@ -1,29 +1,34 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main() {
 
-    int ct = 0;
-    string sub, s;
-    vector<string> words;
+    int count = 0;
+    string sub, tmp, s = " ";
+
     cin >> sub;
-    getline(cin.ignore(), s);
+    getline(cin.ignore(), tmp);
 
-    for(size_t i = 0 ; i < s.length() ; i++){
-        if(s[i] != '"' || s )
-    }
+    // sub = "Sadet";
+    // s = "\"Phra Sadet\" tham \"Phra Sadet\" wa ja sadet rue mai sadet.";
+    s += tmp;
+    s += " ";
 
-    for(auto x: words){
-        size_t pos = x.find(sub);
-        while (pos != string::npos)
-        {
-            ct++;
-            pos = x.find(sub, pos +1);
+    for(int i = 0 ; i < s.length() ; i++)
+    {
+        if(s.substr(i, sub.length()) == sub){
+            // front check
+            if( (s[i-1] >= 'A' && s[i-1] <= 'Z') || (s[i-1] >= 'a' && s[i-1] <= 'z')
+            // back check
+            ||  (s[i+sub.length()] >= 'A' && s[i+sub.length()] <= 'Z') || (s[i+sub.length()] >= 'a' && s[i+1+sub.length()] <= 'z')){
+                continue;
+            }else{
+                count++;
+            }
         }
-        
     }
 
-    cout << ct;
+    cout << count;
 
 
     return 0;
