@@ -3,39 +3,49 @@ using namespace std;
 
 int main(){
 
-    long long int n; cin >> n;
+    double n; 
+    
+    cin >> n;
+    // n = 845600;
 
-    int a, pow_10 = 0;
-    double b;
+    double front, back;
 
-    if(n >= pow(10, 9)){
-        a = n / 1000000000;
-        b = (n / 1000000000.0)- a;
-        b = round(b * 10);
-        if(b == 0){
-            cout << a << "B";
+    // front = n / 1000;
+    // back = int(n) % 1000;
+
+    // cout << front << " " << back << " ";
+
+    if( n >= 1000000000 ){
+        front = n / 1000000000;
+        back = int(n) % 1000000000;
+        if( n < 10000000000){
+            cout << round(front * 10) / 10.0;
         }else{
-            cout << a << "." << b << "B";
+            cout << round(front);
         }
-    }else if(n >= pow(10, 6)){
-        a = n / 1000000;
-        b = (n / 1000000.0)- a;
-        b = round(b * 10);
-        if(b == 0){
-            cout << a << "M";
+        cout << "B";
+    }
+    else if( n >= 1000000 ){
+        front = n / 1000000;
+        back = int(n) % 1000000;
+        if( n < 10000000){
+            cout << round(front * 10) / 10.0;
         }else{
-            cout << a << "." << b << "M";
+            cout << round(front);
         }
-    }else if(n >= pow(10, 3)){
-        a = n / 1000;
-        b = (n / 100000.0) ;
-        b = round(b)/1.0;
-        if(b == 0){
-            cout << a << "K";
+        cout << "M";
+    }
+    else if( n >= 1000 ){
+        front = n / 1000;
+        back = int(n) % 1000;
+        if( n < 10000){
+            cout << round(front * 10) / 10.0;
         }else{
-            cout << a << "." << b << "K";
+            cout << round(front);
         }
-    }else{
+        cout << "K";
+    }
+    else{
         cout << n;
     }
 
