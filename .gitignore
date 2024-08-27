@@ -7,7 +7,6 @@
 # Ignore .exe files
 *.exe
 *.tmp
-
 a.out
 *.txt
 
