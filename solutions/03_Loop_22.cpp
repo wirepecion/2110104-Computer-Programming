@@ -1,12 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// vector<int> prime;
-// vector<bool> is_prime;
-
-// int get_sieve(int n){
-
-// }
 
 int main(){
     int n, i = 2;

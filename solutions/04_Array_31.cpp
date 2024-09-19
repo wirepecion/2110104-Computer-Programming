@@ -3,8 +3,10 @@ using namespace std;
 
 int main(){
 
-    vector<string> vocab;
-
+    int m, n;
+    m = 0 , n = 1234567890;
+    
+    
 
     return 0;
 }
